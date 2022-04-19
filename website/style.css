@@ -1,0 +1,184 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+--white:#fff;
+--cultured:#F8F9FA;
+--cultured-lg:#DEE2E6;
+--erie-bk:#212529;
+--dark-gray:#ababab;
+--light-gray:#808080;
+--light_bg:#333333;
+--blue-dr:#0C274A;
+--blue-lg:#0c1e39;
+--dark-bg:#222222;
+--black:#000;
+--box-shadow:0 0.5rem 1rem rgba(0,0,0,0.1);
+}
+
+*{
+  font-family: 'Segoe UI',sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+html{
+  font-size:62.5%;
+  overflow-x:hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;  /*busca información*/
+}
+
+body{
+  background-color:var(--dark-bg);
+}
+
+section{
+  padding: 5rem 9%;
+}
+
+.heading{
+  color: var(--erie-bk);
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 200;
+  text-transform: uppercase;
+  padding-bottom: 4rem;
+}
+
+.heading span{
+  font-weight: 700;
+}
+
+.home{
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./camino.jpg');
+  filter:grayscale(100%);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  
+  /*texto se esta centrando.*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.home .hero-text{
+  font-size: 7rem;
+  color: var(--white);
+  font-weight:200;
+  line-height: 1.2;
+}
+
+.home .hero-text span{
+  font-weight: 800;
+}
+
+.home p{
+  color: var(--dark-gray);
+  font-size:2.5rem;
+  margin-top: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+}
+
+/*header*/
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5rem 9%;
+  z-index: 100;/*Para poder mostrar en la parte frontal.*/
+}
+
+.header .navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .navbar a{
+  font-size:1.9rem;
+  color: var(--white);
+  padding: 0 2rem;
+  letter-spacing: 0.3rem;
+  font-weight:300;
+  text-transform: uppercase;
+}
+
+.header .menu {
+  font-size: 2.5rem;
+  color: var(--white);
+  cursor: pointer;
+  text-align: left;
+  display: none;
+}
+
+/*Proyectos*/
+.portfolio{
+  background-color:var(--cultured-lg);
+}
+
+.portfolio .box-container .box .image{
+  height: 30rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio .box-container .box .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.portfolio .box-container{
+  display: grid;
+  grid-template-columns:repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 4rem;
+}
+
+.portfolio .box-container .box{
+  background-color: var(--blue-lg);
+  padding: 0.3rem;
+  box-shadow: var(--box-shadow);
+}
+
+.portfolio .box-container .box:hover .image img{
+  transform: scale(1.2);
+}
+
+.portfolio .box-container .box .image .content {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--blue-lg);
+  /* height: 100%; */
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(100%);
+}
+
+.portfolio .box-container .box:hover .image .content {
+  transform:translateY(0)
+}
+
+.portfolio .box-container .box .image .content h2{
+  font-size: 2rem;
+  color: var(--white);
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+
+}
