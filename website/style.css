@@ -69,6 +69,18 @@ section{
   font-weight: 700;
 }
 
+.btn{
+  background-color: var(--crismon);
+  font-size: 1.7rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: var(--white);
+  text-transform: uppercase;
+  margin-right: 1rem;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
 .home{
   height: 100vh;
   background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('./camino.jpg');
@@ -264,4 +276,57 @@ section{
 .resume .col-container .col .box .university {
  color: var(--blue-dr);
  text-transform: capitalize;
+}
+
+/*About Me*/
+.about{
+  background-color: var(--cultured-lg)
+}
+.about .box-container .box .image{
+  height: 100%;
+  overflow: hidden;
+}
+
+.about .box-container .box .image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem,1fr));
+  gap:4rem;
+}
+
+.about .box-container .box p{
+  color: var(--erie-bk);
+  margin-bottom: 2rem;
+  font-size:1.7rem;
+  letter-spacing:0.1rem;
+  line-height:1.5;
+  text-transform: none;
+}
+
+/*footer*/
+.footer{
+  border-top:0.2rem solid var(--light-gray);
+  text-align: center;
+}
+
+.footer .socials ion-icon{
+  font-size: 2.5rem;
+  color: var(--white);
+  background-color: var(--crismon);
+  border-radius:50%;
+  padding: 1rem;
+  margin: 0 1rem;
+  cursor:pointer;
+}
+
+.footer p{
+  font-size: 1.7rem;
+  color: var(--dark-gray);
+  margin-top: 3rem;
+  text-transform: uppercase;
 }
