@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background:#e84118;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.section-timeline{
+  padding: 50px 20px;
+}
+
+.section-timeline .timeline{
+  position:relative;
+  margin: 0 auto;
+  max-width: 1440px;
+  padding:100px 0;
+}
+
+.section-timeline h1{
+  text-align: center;
+  font-size: 45px;
+  color: white;
+}
+
+/*CENTER LINE*/
+.section-timeline .timeline::before{
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: calc(100% - 200px); /*buscar*/
+  background:white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*CONTENT BOX*/
+.section-timeline .timeline .row .event{
+  position:relative;
+  padding: 20px;
+  background: white;
+  width: calc(50% - 30px);
+  color: black;
+  box-shadow: 0 10px 20px rgba(8,0, 0, 0.3);
+}
+
+/*ALIGN CONTENT BOX*/
+.section-timeline .timeline .row{
+  display: flex;
+}
+
+.section-timeline .timeline .row.left{
+  justify-content: flex-start;
+}
+
+.section-timeline .timeline .row.right{
+  justify-content: flex-end;
+}
+
+/*CENTER LINE DOT*/
+.section-timeline .timeline .row .event::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: blue;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.section-timeline .timeline .row.left .event::before {
+  right: -40px;
+}
+
+.section-timeline .timeline .row.right .event::before {
+  left: -40px;
+}
+
+/*CONTENT BOX ARROW*/
+.section-timeline .timeline .row .event::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background:green;
+  top: 47%;
+  transform: rotate(45deg) translateY(-50%);
+  z-index: -1;
+}
+
+.section-timeline .timeline .row.left .event::after {
+ right: -3px
+}
+
+.section-timeline .timeline .row.right .event::after {
+  left: -17px
+}
+
+/*CONTENT BOX TEXT*/
+
+.section-timeline .timeline .row .event {
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
+/*RESPONIVE*/
+@media (max-width: 768px){
+  .section-timeline .timeline::before {
+    left: 20px;
+  }
+
+  .section-timeline .timeline .row .event {
+    width: 100%;
+    margin-left: 50px;
+  }
+
+  .section-timeline .timeline .row:not(:last-child) .event {
+    margin-bottom: 50px;
+  }
+
+  .section-timeline .timeline .row.left .event::before {
+    left: -40px
+  }
+
+  .section-timeline .timeline .row.left .event::after {
+      left: -18px
+    }
+}
